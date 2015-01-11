@@ -156,3 +156,19 @@ prepare_downolads <- function(dt) {
         Property.damage = PROPDMG, Crops.damage = CROPDMG
     ) %>% mutate(State=state.abb[match(State, tolower(state.name))])
 }
+
+
+#' Prepare ggvis map of economic or population impact
+#' 
+#' @param dt data.table
+#' @param states_map data.frame returned from map_data("state")
+#' @param year_min integer
+#' @param year_max integer
+#' @param fill character name of the variable
+#' @param title character
+#' @param low character hex
+#' @param high character hex
+#' @return ggvis plot
+#' 
+ggvis_plot_impact_by_state <- function (dt, states_map, year_min, year_max, fill, title, low = "#fff5eb", high = "#d94801") {
+}
